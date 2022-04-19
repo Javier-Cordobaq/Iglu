@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 22%, rgba(255,255,255,1) 52%);
+    height: 80vh;
+    border-bottom: 1px solid #5175f4;
+}
+
+.contedorContenido {
+    width: 50%;
+}
+
+.contedorContenido button {
+    background-color: #5175f4;
+    border: none;
+    padding: 10px 20px;
+    width: 50%;
+    border-radius: 50px;
+    color: white;
+    font-size: 2.5vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+    transition: 0.3s all;
+}
+
+.contedorContenido button:hover {
+    background-color: #405cc3;
+    cursor: pointer;
+}
+
+.texto1 {
+    font-weight: 450;
+    font-size: 7vh;
+    margin: 0;
+}
+
+.textoBottom {
+    text-transform: uppercase;
+    font-size: 3.5vh;
+}

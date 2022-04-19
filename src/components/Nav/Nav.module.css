@@ -1,0 +1,270 @@
+.contenedor {
+    height: 6rem;
+    width: 100%;
+    border-bottom: 1px solid #5175f4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 10rem;
+    margin-left: 4rem;
+}
+
+.logo img {
+    object-fit: cover;
+    width: 70%;
+}
+
+.contenedorNavegacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.rutasUL {
+    display: flex;
+}
+
+.rutasUL li {
+    list-style: none;
+    margin-right: 2rem;
+    font-weight: bold;
+}
+
+.rutasUL li:last-child {
+    color: #5175f4;
+}
+
+.redesSociales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.logos {
+    height: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.boton {
+    height: 2.5rem;
+}
+
+.get {
+    position: relative;
+   }
+   
+   .get p {
+     position: absolute;
+     top: 10px;
+     right: 27px;
+     color: white;
+     margin: 0;
+     font-weight: bold;
+     font-size: 15px;
+   }
+   
+   .get p:hover {
+     cursor: pointer;
+     pointer-events: none;
+   }
+
+.cambiarIdioma {
+    position: relative;
+    box-sizing: border-box;
+    margin-left: 2rem;
+    width: 5rem;
+    height: 100%;
+    color: white;
+}
+
+.textoCambioDeIdioma {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5175f4;
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.textoCambioDeIdioma p {
+    text-align: center;
+    font-size: 1.8vh;
+    padding: 0px 5px;
+    margin: 0;
+}
+
+.textoCambioDeIdioma p:first-child {
+       border-right: 1px solid white;
+}
+
+.contendorNavCelular {
+    display: none;
+}
+
+.contenedorNavegacionMovil {
+    display: none;
+}
+
+@media (max-width: 1115px){
+    .contenedor {
+      display: none;
+    }
+
+    .logo {
+        margin-left: 1rem;
+    }
+
+    .contendorNavCelular {
+        height: 6rem;
+        width: 100%;
+        border-bottom: 1px solid #5175f4;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .filtros_cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 100%;
+    }
+
+    .contenedirCheckBox span {
+        font-size: 30px;
+    }
+    
+    .input_filtros {
+        display: none;
+        position: absolute;
+    }
+
+    .filtros_cont span {
+        font-size: 30px;
+        color:#5175f4;
+    }
+    
+    .input_filtros:checked + span {
+        color:#5175f4;
+    }
+
+    /* Estilos de la modal del nav */
+
+    .contenedorNavegacionMovil {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: auto;
+        border-bottom: 1px solid #5175f4;
+        animation-name: Mostrar;
+        animation-duration: 0.4s;
+        transition: 0.4s all;
+    }
+    
+    .rutasUL {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .rutasUL li {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        font-weight: bold;
+        border-bottom: 1px solid #5175f4;
+        width: 100%;
+        height: 3rem;
+        padding-left: 2rem;
+    }
+    
+    .rutasUL li:last-child {
+        color: #5175f4;
+    }
+    
+    .redesSociales {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        padding-left: 2rem;
+    }
+    
+    .logos {
+        height: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    
+    .boton {
+        height: 2.5rem;
+        padding-left: 2rem;
+    }
+    
+    .get {
+        position: relative;
+       }
+       
+       .get p {
+         position: absolute;
+         top: 10px;
+         right: 27px;
+         color: white;
+         margin: 0;
+         font-weight: bold;
+         font-size: 15px;
+       }
+       
+       .get p:hover {
+         cursor: pointer;
+         pointer-events: none;
+       }
+    
+    .cambiarIdioma {
+        position: relative;
+        box-sizing: border-box;
+        margin-left: 2rem;
+        width: 5rem;
+        height: 3rem;
+        color: white;
+    }
+    
+    .textoCambioDeIdioma {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #5175f4;
+        width: 100%;
+        height: 2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .textoCambioDeIdioma p {
+        text-align: center;
+        font-size: 1.8vh;
+        padding: 0px 5px;
+        margin: 0;
+    }
+    
+    .textoCambioDeIdioma p:first-child {
+           border-right: 1px solid white;
+    }
+}
