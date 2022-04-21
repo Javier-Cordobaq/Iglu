@@ -1,0 +1,140 @@
+.contTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contTop h1 {
+    color: #5175f4;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.contBotones {
+    display: flex;
+    border-radius: 40px;
+    border: 1px solid rgb(222, 222, 222);
+    width: 600px;
+    height: 80px;
+} 
+
+.seleccionado {
+    background-color: #5175f4;
+    height: 100%;
+    border-radius: 40px;
+    border: none;
+    width: 200px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s all;
+    font-size: 18px;
+}
+
+.noSeleccionado {
+    height: 100%;
+    border-radius: 40px;
+    border: none;
+    background: none;
+    width: 200px;
+    transition: 0.3s all;
+    color: rgb(140, 140, 140);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.noSeleccionado:hover {
+    cursor: pointer;
+    color: #5175f4;
+}
+
+@media only screen and (max-width: 768px) {
+    .contTop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contTop h1 {
+        color: #5175f4;
+        font-size: 15px;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+    }
+    
+    .contBotones {
+        display: flex;
+        border-radius: 40px;
+        border: 1px solid rgb(222, 222, 222);
+        width: 600px;
+        height: 80px;
+    } 
+    
+    .seleccionado {
+        background-color: #5175f4;
+        height: 100%;
+        border-radius: 40px;
+        border: none;
+        width: 200px;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s all;
+        font-size: 18px;
+    }
+    
+    .noSeleccionado {
+        height: 100%;
+        border-radius: 40px;
+        border: none;
+        background: none;
+        width: 200px;
+        transition: 0.3s all;
+        color: rgb(140, 140, 140);
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .noSeleccionado:hover {
+        cursor: pointer;
+        color: #5175f4;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contBotones {
+        display: flex;
+        border-radius: 40px;
+        border: 1px solid rgb(222, 222, 222);
+        width: 300px;
+        height: 60px;
+    } 
+    
+    .seleccionado {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #5175f4;
+        height: 100%;
+        border-radius: 40px;
+        border: none;
+        width: 100px;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s all;
+        font-size: 12px;
+    }
+    
+    .noSeleccionado {
+        height: 100%;
+        border-radius: 40px;
+        border: none;
+        background: none;
+        width: 100px;
+        transition: 0.3s all;
+        color: rgb(140, 140, 140);
+        font-weight: bold;
+        font-size: 11px;
+    }
+}

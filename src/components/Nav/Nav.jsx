@@ -11,7 +11,7 @@ const Nav = () => {
     const [menu, setMenu] = useState(false)
 
   return (
-    <div>
+    <div className={style.contenedorSticky}>
         <div className={style.contenedor}>
             <div className={style.logo}>
                 <img src={logo} alt='' />

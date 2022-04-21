@@ -1,0 +1,506 @@
+.contenedor {
+    position: relative;
+    top: -15px;
+    box-sizing: border-box;
+    background: none;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contTop {
+    display: flex;
+    width: 1200px;
+    height: 500px;
+    margin-bottom: 3rem;
+}
+
+.izquierdaTop {
+    display: flex;
+    height: 100%;
+    width: 70%;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-right: 3rem;
+}
+
+.derechaTop {
+    background-color:#6ed7f4;
+    height: 100%;
+    width: 30%;
+    border-radius: 30px;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 2rem 1.5rem;
+    color: white;
+}
+
+.derechaTop button {
+    background-color: white;
+    color: #5175f4;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 18px;
+}
+
+.parrafos {
+    display: flex;
+    align-items: center;
+}
+
+.parrafos span {
+    color: rgb(0, 185, 28);
+    margin-right: 1rem;
+    font-size: 18px;
+}
+
+.canHelp {
+    margin-top: 2rem;
+}
+
+.derechaTop p {
+    color: white;
+    font-size: 15px;
+    margin: 7px 0;
+}
+
+.derechaTop h1 {
+    margin-top: 0;
+    font-size: 30px;
+    color: black;
+}
+
+.derechaTop h2 {
+    margin-top: 0;
+}
+
+.informaciónIzquierdaTop {
+    box-sizing: border-box;
+    text-align: left;
+    padding: 2.5rem;
+    height: 100%;
+    width: 50%;
+    background-color: #5175f4;
+    color: white;
+}
+
+.informaciónIzquierdaTop h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.informaciónIzquierdaTop h1 {
+    font-size: 40px;
+}
+
+.informaciónIzquierdaTop p {
+    font-size: 18px;
+}
+
+.informaciónIzquierdaTop button {
+    background-color: white;
+    color: #5175f4;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 18px;
+    margin-top: 10%;
+}
+
+.contenedorImagen {
+    background-color: rgb(72, 129, 72);
+    width: 50%;
+    height: 100%;
+}
+
+.contenedorBottom {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 500px;
+    box-sizing: border-box;
+    text-align: left;
+    color: white;
+}
+
+.contenedorBottom h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    height: 70px;
+    line-height: 100%;
+}
+
+.parrafoArriba {
+    color: black;
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contenedorBottom p {
+    margin-top: 0;
+    font-size: 16px;
+    height: 110px;
+}
+
+.cuadrado1 {
+    box-sizing: border-box;
+    height: 100%;
+    width: 30%;
+    background-color: #5fb73b;
+    border-radius: 20px;
+    border: 1px solid #5fb73b;
+    overflow: hidden;
+}
+
+.cuadrado1 button {
+    background-color: white;
+    color: #5fb73b;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 15px;
+}
+
+.cuadrado2 {
+    height: 100%;
+    width: 30%;
+    background-color: #f978ce;
+    border-radius: 20px;
+    border: 1px solid #f978ce;
+    overflow: hidden;
+}
+
+.cuadrado2 button {
+    background-color: white;
+    color: #f978ce;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 15px;
+}
+
+.cuadrado3 {
+    height: 100%;
+    width: 30%;
+    background-color: #f93564;
+    border-radius: 20px;
+    border: 1px solid #f93564;
+    overflow: hidden;
+}
+
+.cuadrado3 button {
+    background-color: white;
+    color: #f93564;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 15px;
+}
+
+.contImagen {
+    height: 40%;
+    width: 100%;
+    background-color: #c2c2c2;
+}
+
+.contenidoTexto {
+    box-sizing: border-box;
+    padding: 0.5rem 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .contenedor {
+        position: relative;
+        top: -15px;
+        box-sizing: border-box;
+        background: none;
+        height: auto;
+        width: 100%;
+        padding: 0 6rem;
+    }
+    
+    .contTop {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    
+    .izquierdaTop {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        border-radius: 30px;
+        overflow: hidden;
+        margin-right: 0;
+        margin-bottom: 4rem;
+    }
+    
+    .derechaTop {
+        background-color: rgb(55, 232, 232);
+        height: auto;
+        width: 100%;
+        border-radius: 30px;
+    }
+    
+    .informaciónIzquierdaTop {
+        box-sizing: border-box;
+        text-align: left;
+        padding: 2.5rem;
+        height: 100%;
+        width: 100%;
+        background-color: #5175f4;
+        color: white;
+    }
+    
+    .informaciónIzquierdaTop h3 {
+        margin-top: 0;
+        font-size: 2.5vh;
+    }
+    
+    .informaciónIzquierdaTop h1 {
+        font-size: 5.5vh;
+    }
+    
+    .informaciónIzquierdaTop p {
+        font-size: 2.5vh;
+    }
+    
+    .informaciónIzquierdaTop button {
+        background-color: white;
+        color: #5175f4;
+        border: none;
+        font-weight: 700;
+        border-radius: 10px;
+        padding: 5px 30px;
+        font-size: 2.5vh;
+        margin-top: 10%;
+    }
+    
+    .contenedorImagen {
+        background-color: rgb(72, 129, 72);
+        width: 100%;
+        min-height: 60vh;
+    }
+
+    /* Estilos cuadraditos de colores abajo de el banner */
+
+    .contenedorBottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        text-align: left;
+        color: white;
+    }
+    
+    .contenedorBottom h1 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        height: 50px;
+        line-height: 100%;
+    }
+    
+    .parrafoArriba {
+        color: black;
+        margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    
+    .contenedorBottom p {
+        margin-top: 0;
+        font-size: 16px;
+        height: 60px;
+    }
+    
+    .cuadrado1 {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        background-color: #5fb73b;
+        border-radius: 20px;
+        border: 1px solid #5fb73b;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+    
+    .cuadrado1 button {
+        background-color: white;
+        color: #5fb73b;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 30px;
+        font-size: 15px;
+    }
+    
+    .cuadrado2 {
+        height: 100%;
+        width: 100%;
+        background-color: #f978ce;
+        border-radius: 20px;
+        border: 1px solid #f978ce;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+    
+    .cuadrado2 button {
+        background-color: white;
+        color: #f978ce;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 30px;
+        font-size: 15px;
+    }
+    
+    .cuadrado3 {
+        height: 100%;
+        width: 100%;
+        background-color: #f93564;
+        border-radius: 20px;
+        border: 1px solid #f93564;
+        overflow: hidden;
+    }
+    
+    .cuadrado3 button {
+        background-color: white;
+        color: #f93564;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 30px;
+        font-size: 15px;
+        margin-top: 1rem;
+    }
+    
+    .contImagen {
+        height: 30vh;
+        width: 100%;
+        background-color: #c2c2c2;
+    }
+    
+    .contenidoTexto {
+        box-sizing: border-box;
+        padding: 0.5rem 2rem 2rem 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .contenedor {
+        padding: 0 1rem;
+    }
+
+     /* Estilos cuadraditos de colores abajo de el banner */
+
+     .contenedorBottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        text-align: left;
+        color: white;
+    }
+    
+    .contenedorBottom h1 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        height: 70px;
+        line-height: 100%;
+    }
+    
+    .parrafoArriba {
+        color: black;
+        margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    
+    .contenedorBottom p {
+        margin-top: 0;
+        font-size: 16px;
+        height: 110px;
+    }
+    
+    .cuadrado1 {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        background-color: #5fb73b;
+        border-radius: 20px;
+        border: 1px solid #5fb73b;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+    
+    .cuadrado1 button {
+        background-color: white;
+        color: #5fb73b;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 30px;
+        font-size: 15px;
+    }
+    
+    .cuadrado2 {
+        height: 100%;
+        width: 100%;
+        background-color: #f978ce;
+        border-radius: 20px;
+        border: 1px solid #f978ce;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+    
+    .cuadrado2 button {
+        background-color: white;
+        color: #f978ce;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 30px;
+        font-size: 15px;
+    }
+    
+    .cuadrado3 {
+        height: 100%;
+        width: 100%;
+        background-color: #f93564;
+        border-radius: 20px;
+        border: 1px solid #f93564;
+        overflow: hidden;
+    }
+    
+    .cuadrado3 button {
+        background-color: white;
+        color: #f93564;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 30px;
+        font-size: 15px;
+        margin-top: 10%;
+    }
+    
+    .contImagen {
+        height: 30vh;
+        width: 100%;
+        background-color: #c2c2c2;
+    }
+    
+    .contenidoTexto {
+        box-sizing: border-box;
+        padding: 0.5rem 2rem 2rem 2rem;
+    }
+
+}
