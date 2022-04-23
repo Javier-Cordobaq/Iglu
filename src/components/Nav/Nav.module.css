@@ -13,7 +13,14 @@
     justify-content: space-between;
     background-color: white;
 }
-
+.contenedorTeam {
+    height: 6rem;
+    width: 100%;
+    border-bottom: 1px solid #f978ce;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
 .logo {
     display: flex;
     align-items: center;
@@ -22,12 +29,23 @@
     width: 10rem;
     margin-left: 4rem;
 }
-
 .logo img {
     object-fit: cover;
     width: 70%;
 }
-
+.logoTeam {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 10rem;
+    margin-left: 4rem;
+    filter: brightness(0%);
+}
+.logoTeam img {
+    object-fit: cover;
+    width: 70%;
+}
 .contenedorNavegacion {
     display: flex;
     align-items: center;
@@ -37,16 +55,27 @@
 
 .rutasUL {
     display: flex;
+    color: black;
 }
-
+.rutasUL a {
+    text-decoration: none;
+    color: none;
+}
 .rutasUL li {
     list-style: none;
     margin-right: 2rem;
     font-weight: bold;
 }
-
-.rutasUL li:last-child {
+.home {
     color: #5175f4;
+    transform: scale(1.1);
+}
+.team {
+    color: #f978ce;
+    transform: scale(1.1);
+}
+.noSelect {
+    color: black;
 }
 
 .redesSociales {
@@ -128,6 +157,9 @@
 @media (max-width: 1115px){
     .contenedor {
       display: none;
+    }
+    .contenedorTeam{
+        display: none;
     }
 
     .logo {

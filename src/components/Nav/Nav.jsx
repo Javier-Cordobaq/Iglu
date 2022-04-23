@@ -5,21 +5,26 @@ import botonWp from '../../imagenes/wpp.png'
 import instagram from '../../imagenes/instagram.png'
 import mensaje from '../../imagenes/mensaje.png'
 import cel from '../../imagenes/cel.png'
+import { Link } from 'react-router-dom' 
 
 const Nav = () => {
 
     const [menu, setMenu] = useState(false)
 
+    const principal = '/'
+    const team = '/team'
+    const ruta = window.location.pathname
+
   return (
     <div className={style.contenedorSticky}>
-        <div className={style.contenedor}>
-            <div className={style.logo}>
+        <div className={`${ruta === principal ? style.contenedor:style.contenedorTeam}`}>
+            <div className={`${ruta === principal ? style.logo:style.logoTeam}`}>
                 <img src={logo} alt='' />
             </div>
             <div className={style.contenedorNavegacion}>
                 <ul className={style.rutasUL}>
-                    <li>Work</li>
-                    <li>The team</li>
+                    <Link to='/'><li className={`${ruta === principal ? style.home:style.noSelect}`}>Work</li></Link>
+                    <Link to='/team'><li className={`${ruta === team ? style.team:style.noSelect}`}>The team</li></Link>
                     <li>Blog</li>
                     <li>Set up a Meeting</li>
                 </ul> 

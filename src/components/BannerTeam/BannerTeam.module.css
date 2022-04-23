@@ -1,0 +1,120 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(56deg, rgba(238,174,202,1) 0%, rgba(255,146,169,1) 13%, rgba(238,6,141,1) 21%, rgba(172,61,180,1) 35%, rgba(237,35,168,1) 51%, rgba(223,83,231,1) 65%, rgba(156,51,232,1) 79%, rgba(200,104,227,1) 90%, rgba(166,193,242,1) 100%); ;
+    /* background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 22%, rgba(255,255,255,1) 52%); */
+    animation: animate 20s infinite ease-in-out;
+    background-size: 400% 400%;
+    height: 80vh;
+    border-bottom: 1px solid #f978ce;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 100%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+.work {
+    position: absolute;
+    bottom: 3rem;
+    right: 8rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid black;
+    font-weight: 700;
+    width: 8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.contedorContenido {
+    width: 50%;
+}
+
+.contedorContenido button {
+    background-color: #5175f4;
+    border: none;
+    padding: 10px 20px;
+    width: 50%;
+    border-radius: 50px;
+    color: white;
+    font-size: 2.5vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+    transition: 0.3s all;
+}
+
+.contedorContenido button:hover {
+    background-color: #405cc3;
+    cursor: pointer;
+}
+
+.texto1 {
+    font-weight: 450;
+    font-size: 7vh;
+    margin: 0;
+}
+
+.textoBottom {
+    text-transform: uppercase;
+    font-size: 3.5vh;
+}
+
+@media only screen and (max-width: 768px){
+    .contedorContenido {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        height: auto;
+        box-sizing: border-box;
+        padding: 2rem 0;
+    }
+
+    .texto1 {
+        font-weight: 450;
+        font-size: 5vh;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .textoBottom {
+        text-transform: uppercase;
+        font-size: 2.5vh;
+    }
+    .work {
+        position: static;
+        text-transform: uppercase;
+        border-bottom: 2px solid black;
+        font-weight: 700;
+        margin: 1.5rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .contedorContenido button {
+        background-color: #5175f4;
+        border: none;
+        padding: 10px 20px;
+        width: 100%;
+        border-radius: 50px;
+        color: white;
+        font-size: 2.5vh;
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s all;
+    }
+}

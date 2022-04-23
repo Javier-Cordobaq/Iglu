@@ -1,0 +1,80 @@
+.contenedorCards {
+    position: relative;
+    top: -15px;
+    height: auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    grid-gap: 3rem;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .card {
+    height: 500px;
+    width: 100%;
+    background-color: rgb(160, 95, 16);
+    border-radius: 30px;
+} */
+
+.cuadrado1 {
+    box-sizing: border-box;
+    height: 500px;
+    width: 100%;
+    border-radius: 30px;
+    border: 2px solid rgb(191, 191, 191);
+    overflow: hidden;
+}
+
+.cuadrado1 button {
+    background-color: #f978ce;
+    color: white;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 18px;
+    width: 70%;
+}
+.contImagen {
+    height: 50%;
+    width: 100%;
+    background-color: #c2c2c2;
+}
+.contenidoTexto {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 0.5rem 1.5rem;
+    text-align: left;
+}
+
+.contenidoTexto h1 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 100%;
+}
+.contenidoTexto p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 110%;
+}
+
+@media only screen and (max-width: 768px) {
+    .contenedorCards {
+        position: relative;
+        top: -15px;
+        height: auto;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+        grid-gap: 3rem;
+        padding: 0 1rem;
+        text-align: left;
+        justify-content: center;
+        align-items: center;
+    }
+}
