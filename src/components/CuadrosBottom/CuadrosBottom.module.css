@@ -1,0 +1,411 @@
+.contenedor {
+    box-sizing: border-box;
+    background: none;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+}
+
+.contTop {
+    display: flex;
+    width: 1200px;
+    height: 500px;
+    margin-bottom: 3rem;
+}
+
+.izquierdaTop {
+    display: flex;
+    height: 100%;
+    width: 70%;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-left: 3rem;
+}
+
+.derechaTop {
+    background-color:#6ed7f4;
+    height: 100%;
+    width: 30%;
+    border-radius: 30px;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 2rem 1.5rem;
+    color: white;
+}
+
+.derechaTop button {
+    background-color: white;
+    color: #5175f4;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 18px;
+}
+
+.parrafos {
+    display: flex;
+    align-items: center;
+}
+
+.parrafos span {
+    color: rgb(0, 185, 28);
+    margin-right: 1rem;
+    font-size: 18px;
+}
+
+.canHelp {
+    margin-top: 2rem;
+}
+
+.derechaTop p {
+    color: white;
+    font-size: 15px;
+    margin: 7px 0;
+}
+
+.derechaTop h1 {
+    margin-top: 0;
+    font-size: 30px;
+    color: black;
+}
+
+.derechaTop h2 {
+    margin-top: 0;
+}
+
+.informaciónIzquierdaTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 2.5rem;
+    height: 100%;
+    width: 50%;
+    background-color: #5175f4;
+    color: white;
+}
+
+.informaciónIzquierdaTop h3 {
+    margin: 0;
+    font-size: 18px;
+    color: black;
+}
+
+.informaciónIzquierdaTop h1 {
+    margin-top: 0;
+    font-size: 30px;
+    color: black;
+}
+
+.informaciónIzquierdaTop h1:last-of-type {
+    color: white;
+}
+
+.informaciónIzquierdaTop p {
+    font-size: 18px;
+}
+
+.informaciónIzquierdaTop button {
+    background-color: white;
+    color: #5175f4;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 18px;
+    margin-top: 10%;
+}
+
+.contenedorImagen {
+    background-color: rgb(72, 129, 72);
+    width: 50%;
+    height: 100%;
+}
+
+.contenedorBottom {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 500px;
+    box-sizing: border-box;
+    text-align: left;
+    color: white;
+}
+
+.parrafoArriba {
+    color: black;
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cuadrado1 {
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background-color: #5fb73b;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.cuadrado1 button {
+    background-color: white;
+    color: #5fb73b;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 280px;
+    transition: 0.3s all;
+}
+
+.cuadrado1 button:hover {
+    background-color: rgb(221, 221, 221);
+    cursor: pointer;
+}
+
+.contenidoTexto {
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 1rem 3rem;
+}
+
+.contenidoTexto h1 {
+    margin-bottom: 0;
+    color: black;
+    font-size: 40px;
+}
+
+.contenidoTexto h2 {
+    margin-top: 0;
+    color: black;
+    font-size: 28px;
+}
+
+.contenidoTexto h2:first-of-type {
+    margin-bottom: 2rem;
+}
+
+.contenidoTexto h2:last-of-type {
+    margin-top: 2rem;
+}
+
+.contenidoTexto p {
+    font-size: 18px;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 50%;    
+    color: black;
+    box-sizing: border-box;
+    padding: 0 3rem 0 0;
+}
+
+.mensajesIzquierda {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 23px;
+    margin-bottom: 2rem;
+    width: 50%;
+    height: 3.5rem;
+    border-radius: 50px 50px 50px 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+
+.mensajesIzquierda::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    height: 0;
+    width: 0;
+    z-index: -1;
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-left: 20px solid white;
+    border-bottom: 20px solid white;
+    transform: rotate(90deg);
+}
+
+.mensajesDerecha {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+    font-size: 23px;
+    margin-bottom: 2rem;
+    width: 60%;
+    height: 3.5rem;
+    border-radius: 50px 50px 0 50px;
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+
+.mensajesDerecha::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    height: 0;
+    width: 0;
+    z-index: -1;
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-left: 20px solid rgb(238, 238, 238);
+    border-bottom: 20px solid rgb(238, 238, 238);
+    transform: rotate(180deg);
+}
+
+.alinearDerecha {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cuadrado2 {
+    height: 100%;
+    width: 30%;
+    background-color: rgb(114, 79, 222);
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+}
+
+.contImagen {
+    background-color: #5175f4;
+    height: 40%;
+    width: 100%;
+} 
+
+.contenidoInputs {
+    box-sizing: border-box;
+    padding: 0.5rem 2rem;
+    text-align: left;
+    width: 100%;
+}
+
+.contenidoInputs input {
+    border-radius: 10px;
+    border: none;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    width: 80%;
+    height: 1.5rem;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.contenidoInputs button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(114, 79, 222);
+    border: none;
+    border-radius: 10px;
+    padding: 0.3rem 1rem;
+    font-size: 15px;
+    width: 80%;
+    font-weight: bold;
+}
+
+.contenidoInputs input:first-of-type {
+    margin-top: 1rem;
+}
+
+.contenidoInputs input:last-of-type {
+    margin-bottom: 1rem;
+}
+
+.contenidoInputs h1 {
+    font-size: 35px;
+    margin: 0;
+}
+
+.contenidoInputs p {
+    margin: 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .contenedor {
+        padding: 0 6rem;
+    }
+    .contTop {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .contImagen {
+        height: 40vh;
+    }
+    .cuadrado2 {
+        width: 100%;
+    }
+    .contenidoInputs {
+        height: auto;
+        padding: 2rem;
+    }
+    .izquierdaTop {
+        flex-direction: column;
+        width: 100%;
+        margin: 2rem 0;
+    }
+    .informaciónIzquierdaTop {
+        width: 100%;
+    }
+    .contenedorImagen {
+        width: 100%;
+        height: 40vh;
+    }
+    .contenedorBottom {
+        width: 100%;
+        height: auto;
+    }
+    .cuadrado1 {
+        flex-direction: column;
+    }
+    .contenidoTexto {
+        width: 100%;
+    }
+    .chat {
+        width: 100%;
+        padding: 2rem;
+    }
+    .mensajesIzquierda {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contenedor {
+        padding: 0 1rem;
+    }
+    .mensajesIzquierda {
+        width: 100%;
+    }
+    
+    .mensajesDerecha {
+        width: 100%;
+    }
+    .cuadrado1 button {
+        width: 100%;
+    }
+}

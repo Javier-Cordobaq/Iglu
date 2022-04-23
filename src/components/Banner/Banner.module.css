@@ -3,9 +3,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 22%, rgba(255,255,255,1) 52%);
+    background: linear-gradient(to right, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 25%, rgba(238,174,202,1) 50%, rgba(148,187,233,1) 60%) ;
+    /* background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 22%, rgba(255,255,255,1) 52%); */
+    animation: animate 15s infinite ease-in-out;
+    background-size: 400% 400%;
     height: 80vh;
     border-bottom: 1px solid #5175f4;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .work {

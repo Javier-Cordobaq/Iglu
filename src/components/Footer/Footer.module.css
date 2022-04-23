@@ -1,0 +1,98 @@
+.container{
+    height: auto;
+    background-color: #1a1a1a;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    text-align: left;
+}
+
+.logo {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.logo img{
+    object-fit: cover;
+    width: 40%;
+}
+
+.container p {
+    font-weight: 500;
+    margin-bottom: 3rem;
+    color: white;
+    margin-top: 10px;
+}
+
+.rutas {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+    text-align: left;
+    color: #939393;
+}
+
+.rutas a {
+    text-decoration: none;
+    color: #939393;
+    transition:  0.3s all;
+}
+
+.rutas a:hover {
+    color: #5175f4;
+}
+
+.socialMedia {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.redes {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 2rem;
+}
+
+.redes a {
+    margin-right: 0.5rem;
+}
+
+.redes img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100);
+    filter: brightness(0%);
+    transition:  0.3s all;
+}
+
+
+.redes img:hover {
+    filter: none;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+.cont {
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.cont p {
+    margin: 0;
+}
+
+.cont span {
+    font-size: 35px;
+    margin-right: 1rem;
+}

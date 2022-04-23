@@ -1,0 +1,169 @@
+.centrar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contTop {
+    display: flex;
+    width: 1200px;
+    height: 500px;
+    margin-bottom: 3rem;
+}
+
+.izquierdaTop {
+    display: flex;
+    height: 100%;
+    width: 70%;
+    border-radius: 30px;
+    border: 2px solid rgb(191, 191, 191);
+    overflow: hidden;
+    margin-right: 3rem;
+}
+
+.informaciónIzquierdaTop {
+    box-sizing: border-box;
+    text-align: left;
+    padding: 1.5rem 2rem;
+    height: 100%;
+    width: 50%;
+    color: black;
+}
+
+.informaciónIzquierdaTop h1 {
+    font-size: 35px;
+    margin: 0 0 2rem 0;
+}
+
+.informaciónIzquierdaTop p {
+    font-size: 15px;
+}
+
+.informaciónIzquierdaTop button {
+    background-color: #5175f4;
+    color: white;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 18px;
+    margin-top: 10%;
+}
+
+.contenedorImagen {
+    background-color: rgb(222, 222, 222);
+    width: 50%;
+    height: 100%;
+}
+
+.cuadrado1 {
+    box-sizing: border-box;
+    height: 100%;
+    width: 30%;
+    border-radius: 20px;
+    border: 2px solid rgb(191, 191, 191);
+    overflow: hidden;
+}
+
+.cuadrado1 button {
+    background-color: #f978ce;
+    color: white;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 18px;
+    width: 70%;
+}
+.contImagen {
+    height: 40%;
+    width: 100%;
+    background-color: #c2c2c2;
+}
+.contenidoTexto {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 0.5rem 1.5rem;
+    text-align: left;
+}
+
+.contenidoTexto h1 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 100%;
+}
+.contenidoTexto p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 110%;
+}
+
+.title {
+    width: 1200px;
+    text-align: left;
+    padding-left: 4rem;
+    margin: 4rem 0 2rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .centrar {
+        box-sizing: border-box;
+        padding: 0 6rem;
+    }
+    .contTop {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-bottom: 3rem;
+    }
+    .izquierdaTop {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .informaciónIzquierdaTop {
+        width: 100%;
+    }
+    .contenedorImagen {
+        width: 100%;
+        height: 400px;
+    }
+    .cuadrado1 {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .contenidoTexto {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        box-sizing: border-box;
+        padding: 1rem 1.5rem;
+    }
+    .contenidoTexto h1 {
+        margin: 0 0 1rem 0;
+    }
+    .contenidoTexto p {
+        margin: 1rem 0 2rem 0;
+    }
+    .contImagen {
+        height: 300px;
+        width: 100%;
+        background-color: #c2c2c2;
+    }
+    .title {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .centrar {
+        padding: 0 1rem;
+    }
+}
