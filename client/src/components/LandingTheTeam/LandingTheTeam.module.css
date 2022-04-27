@@ -1,0 +1,21 @@
+.buttonToTop {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    background-color: white;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 0px 15px -3px rgba(0,0,0,0.1);
+    transition: 0.3s all;
+    border: 1px solid grey;
+}
+
+.buttonToTop:hover {
+    cursor: pointer;
+    background-color: rgb(224, 224, 224);
+}

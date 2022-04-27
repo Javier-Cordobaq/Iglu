@@ -11,19 +11,22 @@ const Nav = () => {
 
     const [menu, setMenu] = useState(false)
 
-    const principal = '/'
+    const principal = '/' 
+    const work = '/work'
     const team = '/team'
     const ruta = window.location.pathname
 
   return (
     <div className={style.contenedorSticky}>
-        <div className={`${ruta === principal ? style.contenedor:style.contenedorTeam}`}>
+        <div className={`${ruta === principal ? style.contenedor : ruta === team ? style.contenedorTeam:style.contenedorWork}`}>
+            <Link to='/'>
             <div className={`${ruta === principal ? style.logo:style.logoTeam}`}>
                 <img src={logo} alt='' />
             </div>
+            </Link>
             <div className={style.contenedorNavegacion}>
                 <ul className={style.rutasUL}>
-                    <Link to='/'><li className={`${ruta === principal ? style.home:style.noSelect}`}>Work</li></Link>
+                    <Link to='/work'><li className={`${ruta === work ? style.work:style.noSelect}`}>Work</li></Link>
                     <Link to='/team'><li className={`${ruta === team ? style.team:style.noSelect}`}>The team</li></Link>
                     <li>Blog</li>
                     <li>Set up a Meeting</li>
@@ -46,9 +49,11 @@ const Nav = () => {
             </div>
         </div>
         <div className={style.contendorNavCelular}>
-            <div className={style.logo}>
-                <img src={logo} alt='' />
-            </div>
+            <Link to='/'>
+                <div className={style.logo}>
+                    <img src={logo} alt='' />
+                </div>
+            </Link>
                 <div>
                     <div className={style.filtros_cont}>        
                             <label>
@@ -73,8 +78,8 @@ const Nav = () => {
         {menu === true ? 
                     <div className={style.contenedorNavegacionMovil}>
                     <ul className={style.rutasUL}>
-                        <li>Work</li>
-                        <li>The team</li>
+                        <Link to='/work'><li className={`${ruta === principal ? style.home:style.noSelect}`}>Work</li></Link>
+                        <Link to='/team'><li className={`${ruta === team ? style.team:style.noSelect}`}>The team</li></Link>
                         <li>Blog</li>
                         <li>Set up a Meeting</li>
                     </ul> 

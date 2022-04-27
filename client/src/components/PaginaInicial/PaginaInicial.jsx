@@ -6,7 +6,6 @@ import OurClients from '../OurClients/OurClients'
 import Slider from '../Slider/Slider'
 import Footer from '../Footer/Footer'
 import CuadrosBottom from '../CuadrosBottom/CuadrosBottom'
-import ParrafoBottom from '../ParrafoBottom/ParrafoBottom'
 import OurAllies from '../OurAllies/OurAllies'
 import style from '../PaginaInicial/PaginaInicial.module.css'
 
@@ -28,7 +27,6 @@ const PaginaInicial = () => {
         <OurClients/>
         <Slider/>
         <CuadrosBottom/>
-        <ParrafoBottom/>
         <OurAllies/>
         <Footer/>
         <div data-aos="zoom-in-up" data-aos-duration="1200" className={style.buttonToTop} onClick={toTop}>
