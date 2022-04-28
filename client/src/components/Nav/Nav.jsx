@@ -78,8 +78,8 @@ const Nav = () => {
         {menu === true ? 
                     <div className={style.contenedorNavegacionMovil}>
                     <ul className={style.rutasUL}>
-                        <Link to='/work'><li className={`${ruta === principal ? style.home:style.noSelect}`}>Work</li></Link>
-                        <Link to='/team'><li className={`${ruta === team ? style.team:style.noSelect}`}>The team</li></Link>
+                        <Link to='/work'><li>Work</li></Link>
+                        <Link to='/team'><li>The team</li></Link>
                         <li>Blog</li>
                         <li>Set up a Meeting</li>
                     </ul> 
