@@ -1,0 +1,80 @@
+.globalContainer {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #f0f0f1;
+}
+
+.contenedorInputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 0;
+    padding: 26px 24px 34px;
+    font-weight: 400;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
+}
+
+.contenedorInputs button {
+    padding: 0 14px;
+    line-height: 2.71428571;
+    font-size: 14px;
+    vertical-align: middle;
+    min-height: 40px;
+    margin-bottom: 4px;
+    background-color: #5175f4;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    transition: 0.2s all;
+}
+
+.contenedorInputs button:hover {
+    background-color: #4260cb;
+    cursor: pointer;
+}
+
+.contenedorInputs div:last-of-type {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+.materialContainer p{
+    color: #abbdff;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.materialContainer input{
+    width: 100%;
+    border: 1px solid #c3c4c7;
+    padding: 0;
+    outline: none;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    height: 3rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+.materialContainer input::placeholder {
+    color: #c3c4c7;
+    font-weight: bold;
+}
+
+.contImage {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.contImage img {
+    object-fit: cover;
+    width: 80%;
+}
+
+.contCentrado {
+    width: 20rem;
+}

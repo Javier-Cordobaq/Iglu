@@ -14,11 +14,12 @@ const Nav = () => {
     const principal = '/' 
     const work = '/work'
     const team = '/team'
+    const meting = '/meting'
     const ruta = window.location.pathname
 
   return (
     <div className={style.contenedorSticky}>
-        <div className={`${ruta === principal ? style.contenedor : ruta === team ? style.contenedorTeam:style.contenedorWork}`}>
+        <div className={`${ruta === principal ? style.contenedor : ruta === team ? style.contenedorTeam: ruta === work ? style.contenedorWork:style.contenedorMeet}`}>
             <Link to='/'>
             <div className={`${ruta === principal ? style.logo:style.logoTeam}`}>
                 <img src={logo} alt='' />
@@ -29,7 +30,7 @@ const Nav = () => {
                     <Link to='/work'><li className={`${ruta === work ? style.work:style.noSelect}`}>Work</li></Link>
                     <Link to='/team'><li className={`${ruta === team ? style.team:style.noSelect}`}>The team</li></Link>
                     <li>Blog</li>
-                    <li>Set up a Meeting</li>
+                    <Link to='/meting'><li className={`${ruta === meting ? style.meting:style.noSelect}`}>Set up a Meeting</li></Link>
                 </ul> 
                     <div className={style.redesSociales}>
                             <img className={style.logos} src={instagram} alt="" />
@@ -81,7 +82,7 @@ const Nav = () => {
                         <Link to='/work'><li>Work</li></Link>
                         <Link to='/team'><li>The team</li></Link>
                         <li>Blog</li>
-                        <li>Set up a Meeting</li>
+                        <Link to='/meting'><li>Set up a Meeting</li></Link>
                     </ul> 
                         <div className={style.redesSociales}>
                                 <img className={style.logos} src={instagram} alt="" />

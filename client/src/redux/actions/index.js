@@ -2,6 +2,7 @@ import axios from 'axios'
 
 export const INGLES = 'INGLES'
 export const FILTRO = 'FILTRO'
+export const LOG_IN = 'LOG_IN'
 export const SET_MENSAJE = 'SET_MENSAJE'
 export const GET_TIPOS = 'GET_TIPOS'
 export const POST_USUARIOS = 'POST_USUARIOS'
@@ -50,4 +51,12 @@ export const postUsuarios = (info) => async dispatch => {
         payload: json.data
     })
 
+}
+
+export const logIn = (usuario) => async dispatch => {
+    /* const json = await axios.post(`/admin`, usuario) */
+    return dispatch({
+        type: LOG_IN,
+        payload: usuario
+    })
 }

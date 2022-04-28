@@ -1,0 +1,82 @@
+.contenedor {
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    display: flex;
+}
+.contImg{
+ width: 30%;
+ height: 150vh;
+ background-color: rgb(208, 208, 208)
+}
+.contForm{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    box-sizing: border-box;
+    margin-left: 3rem;
+    text-align: left;
+}
+.contForm h1 {
+    font-size: 5rem;
+    line-height: 100%;
+    color: #f93564;
+    margin-bottom: 1rem;
+}
+.contForm p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 450;
+}
+.select {
+    height: 3rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #5175f4;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+}
+.inputs{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #c3c4c7;
+    padding: 0;
+    outline: none;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    height: 3rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+.inputs::placeholder {
+    color: #c3c4c7;
+}
+
+@media only screen and (max-width: 768px) {
+    .contenedor {
+        padding: 0 6rem;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    .contImg{
+        width: 100%;
+        height: 50vh;
+        margin-top: 3rem;
+    }
+    .contForm{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contenedor {
+        padding: 0 1rem;
+    }
+}

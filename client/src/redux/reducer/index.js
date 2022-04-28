@@ -2,11 +2,13 @@ import {
   FILTRO,
   INGLES,
   SET_MENSAJE,
+  LOG_IN
 } from "../actions/index";
 
 const inicialState = {
   idioma: "español",
-  filtro: []
+  filtro: [],
+  login: [],
 };
 
 const rootReducer = (state = inicialState, action) => {
@@ -27,6 +29,11 @@ const rootReducer = (state = inicialState, action) => {
         ...state,
         idioma: state.idioma === "español" ? "ingles" : "español",
       };
+    case LOG_IN:
+        return {
+          ...state,
+          login: action.payload,
+        };
 
     default:
       return state;
