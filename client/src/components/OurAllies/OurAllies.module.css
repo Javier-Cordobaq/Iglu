@@ -79,7 +79,7 @@
 .contImagen {
     height: 40%;
     width: 100%;
-    background-color: #c2c2c2;
+    background-color: rgb(222, 222, 222);
 }
 .contenidoTexto {
     height: 60%;

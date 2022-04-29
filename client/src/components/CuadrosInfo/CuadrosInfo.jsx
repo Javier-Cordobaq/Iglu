@@ -1,20 +1,19 @@
 import React from 'react'
 import style from '../CuadrosInfo/CuadrosInfo.module.css'
+import { useSelector } from 'react-redux'
 
 const CuadrosInfo = () => {
+    const idioma = useSelector(state => state.idioma)
   return (
     <div className={style.contenedor}>
         <div className={style.contTop}>
             <div className={style.izquierdaTop}>
                 <div className={style.informaciónIzquierdaTop}>
                     <h3>{'Featured Project > Gymage Miami'}</h3>
-                    <h1>Social Fitness reimagined</h1>
+                    <h1>{idioma === "español" ? "Fitness social reinventado" : "Social Fitness reimagined"}</h1>
                     <p>A brave new concept, a strong verbal
-                    identity, and strategic social media plan.<br/><br/>
-                    This - and its incredible culture and
-                    architecture- is what’s shaping Gymage
-                    Lifestyle Resort to be the future of social
-                    fitness.</p>
+                    identity, and strategic social media plan.</p>
+                    <p>This - and its incredible culture and architecture- is what’s shaping Gymage Lifestyle Resort to be the future of social fitness.</p>
                     <button>Check it out</button>
                 </div>
                 <div className={style.contenedorImagen}>

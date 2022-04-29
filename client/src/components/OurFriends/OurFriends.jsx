@@ -11,18 +11,18 @@ const OurFriends = () => {
             <Carousel showThumbs={false} centerSlidePercentage={90} centerMode={true} showIndicators={false} showStatus={false} showArrows={false} emulateTouch={true} interval={5000}>
             <div className={style.fila1}>
                 <div className={style.cards}>
-                    1
+                    <p>Sebastián Barniol Compositor</p>
                 </div>
                 <div className={style.cards}>
-                    2
+                    <p>Andrés Benalcazar Motion graphics</p>
                 </div>
                 <div className={style.cards}>
-                    3
+                    <p>Yoya Gutierrez Creativa</p>
                 </div>
             </div>
             <div className={style.fila1}>
                 <div className={style.cards}>
-                    4
+                    <p>Sebastián Barniol Compositor</p>
                 </div>
                 <div className={style.cards}>
                     5
@@ -32,21 +32,21 @@ const OurFriends = () => {
                 </div>
             </div>
             </Carousel>
-            <Carousel centerMode={true} centerSlidePercentage={90} showStatus={false} showIndicators={false} showArrows={false} emulateTouch={true} interval={5000}>
+            <Carousel showThumbs={false} centerMode={true} centerSlidePercentage={90} showStatus={false} showIndicators={false} showArrows={false} emulateTouch={true} interval={5000}>
             <div className={style.fila1}>
                 <div className={style.cards}>
-                    1
+                    <p>Juan José Riplada Instalaciones multimedia</p>
                 </div>
                 <div className={style.cards}>
-                    2
+                    <p>Luis Pesanes Instalaciones multimedia</p>
                 </div>
                 <div className={style.cards}>
-                    3
+                    <p>Valeria Vernaza Fotógrafa</p>
                 </div>
             </div>
             <div className={style.fila1}>
                 <div className={style.cards}>
-                    4
+                <p>Juan José Riplada Instalaciones multimedia</p>
                 </div>
                 <div className={style.cards}>
                     5
@@ -61,4 +61,4 @@ const OurFriends = () => {
   )
 }
 
-export default OurFriends
+export default React.memo(OurFriends);

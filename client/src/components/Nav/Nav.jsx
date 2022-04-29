@@ -5,11 +5,16 @@ import botonWp from '../../imagenes/wpp.png'
 import instagram from '../../imagenes/instagram.png'
 import mensaje from '../../imagenes/mensaje.png'
 import cel from '../../imagenes/cel.png'
+import {cambiarIngles} from '../../redux/actions'
+import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom' 
 
 const Nav = () => {
 
     const [menu, setMenu] = useState(false)
+
+    const dispatch = useDispatch();
+    const idioma = useSelector(state => state.idioma)
 
     const principal = '/' 
     const work = '/work'
@@ -27,10 +32,10 @@ const Nav = () => {
             </Link>
             <div className={style.contenedorNavegacion}>
                 <ul className={style.rutasUL}>
-                    <Link to='/work'><li className={`${ruta === work ? style.work:style.noSelect}`}>Work</li></Link>
-                    <Link to='/team'><li className={`${ruta === team ? style.team:style.noSelect}`}>The team</li></Link>
-                    <li>Blog</li>
-                    <Link to='/meting'><li className={`${ruta === meting ? style.meting:style.noSelect}`}>Set up a Meeting</li></Link>
+                    <Link to='/'><li className={style.noSelect}>Home</li></Link>
+                    <Link to='/work'><li className={`${ruta === work ? style.work:style.noSelect}`}>{idioma === "español" ? "Trabajos" : "Work"}</li></Link>
+                    <Link to='/team'><li className={`${ruta === team ? style.team:style.noSelect}`}>{idioma === "español" ? "El equipo" : "The Team"}</li></Link>
+                    <Link to='/meting'><li className={`${ruta === meting ? style.meting:style.noSelect}`}>{idioma === "español" ? "Organizar una reunión" : "Set up a Meeting"}</li></Link>
                 </ul> 
                     <div className={style.redesSociales}>
                             <img className={style.logos} src={instagram} alt="" />
@@ -42,8 +47,8 @@ const Nav = () => {
                         </div>
                         <div className={style.cambiarIdioma}>
                             <div className={style.textoCambioDeIdioma}>
-                                <p>ESP</p>
-                                <p>ENG</p>
+                                <p onClick={()=>{dispatch(cambiarIngles('español'))}}>ESP</p>
+                                <p onClick={()=>{dispatch(cambiarIngles('ingles'))}}>ENG</p>
                             </div> 
                         </div>
                     </div>
@@ -79,9 +84,9 @@ const Nav = () => {
         {menu === true ? 
                     <div className={style.contenedorNavegacionMovil}>
                     <ul className={style.rutasUL}>
+                        <Link to='/'><li>Home</li></Link>
                         <Link to='/work'><li>Work</li></Link>
                         <Link to='/team'><li>The team</li></Link>
-                        <li>Blog</li>
                         <Link to='/meting'><li>Set up a Meeting</li></Link>
                     </ul> 
                         <div className={style.redesSociales}>
@@ -106,4 +111,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default React.memo(Nav);

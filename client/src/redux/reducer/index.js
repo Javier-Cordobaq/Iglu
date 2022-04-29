@@ -1,7 +1,6 @@
 import {
   FILTRO,
   INGLES,
-  SET_MENSAJE,
   LOG_IN
 } from "../actions/index";
 
@@ -18,16 +17,10 @@ const rootReducer = (state = inicialState, action) => {
         ...state,
         filtro: action.payload
       }
-    case SET_MENSAJE:
-      return {
-        ...state,
-        mensaje: "",
-        login: [],
-      };
     case INGLES:
       return {
         ...state,
-        idioma: state.idioma === "español" ? "ingles" : "español",
+        idioma: action.payload,
       };
     case LOG_IN:
         return {

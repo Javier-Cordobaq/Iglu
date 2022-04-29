@@ -65,7 +65,7 @@ const ContenidoWork = () => {
                 <div className={style.textCont}>
                   <div className={style.header}>
                     <div>
-                      <h1 style={{ color: `${c.color}` }}>{c.name}</h1>
+                      <h1 style={{color: `${c.color}`}}>{c.name}</h1>
                     </div>
                     <div>
                       <img src={instagram} alt="" />
@@ -95,4 +95,4 @@ const ContenidoWork = () => {
   )
 }
 
-export default ContenidoWork
+export default React.memo(ContenidoWork);

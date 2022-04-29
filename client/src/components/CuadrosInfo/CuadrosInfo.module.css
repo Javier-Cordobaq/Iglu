@@ -114,7 +114,7 @@
 }
 
 .contenedorImagen {
-    background-color: rgb(72, 129, 72);
+    background-color: rgb(222, 222, 222);
     width: 50%;
     height: 100%;
 }
@@ -207,7 +207,7 @@
 .contImagen {
     height: 40%;
     width: 100%;
-    background-color: #c2c2c2;
+    background-color: rgb(222, 222, 222);
 }
 
 .contenidoTexto {
