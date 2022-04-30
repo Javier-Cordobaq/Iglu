@@ -1,11 +1,10 @@
-/* import axios from 'axios' */
+import axios from 'axios' 
 
 export const INGLES = 'INGLES'
 export const FILTRO = 'FILTRO'
 export const LOG_IN = 'LOG_IN'
 export const SET_MENSAJE = 'SET_MENSAJE'
 export const GET_TIPOS = 'GET_TIPOS'
-export const POST_USUARIOS = 'POST_USUARIOS'
 
 export const filtro = (info) => async dispatch => {
     return dispatch({
@@ -27,17 +26,22 @@ export const cambiarIngles = (idioma) => async dispatch => {
         payload: json.data
     })
 }
-export const postUsuarios = (info) => async dispatch => {
-    const json = await axios.post(`/usuarios`, info)
-    return dispatch({
-        type: POST_USUARIOS,
-        payload: json.data
-    })
-} */
-export const logIn = (usuario) => async dispatch => {
-    /* const json = await axios.post(`/admin`, usuario) */
-    return dispatch({
-        type: LOG_IN,
-        payload: usuario
-    })
+*/
+export const logIn = (info) => async dispatch => {
+    try{
+        const json = await axios.post(`http://localhost:5000/admin/admin-login`, info)
+        if (json.status === 200){
+            return dispatch({
+                type: LOG_IN,
+                payload: true
+            })
+        }
+    }
+    catch (error) {
+        console.log(error, 'Errores')
+        return dispatch({
+            type: LOG_IN,
+            payload: error.response.data.errors
+        })
+    }
 }

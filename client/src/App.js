@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux';
 function App() {
 
   const login = useSelector(c => c.login)
+  console.log(login)
 
   return (
     <div className="App">
@@ -19,7 +20,7 @@ function App() {
         <Route exact path='/work' element={<LandingWork/>}/>
         <Route exact path='/team' element={<LandingTheTeam/>}/>
         <Route exact path='/meting' element={<Meeting/>}/>
-        <Route exact path='/admin' element={login.length === 0 ? <LogIn/> : <SubirProyectos/>} />
+        <Route exact path='/admin' element={login === true ? <SubirProyectos/>:<LogIn/>} />
       </Routes>
     </div>
   );

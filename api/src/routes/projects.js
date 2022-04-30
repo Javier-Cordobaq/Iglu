@@ -6,7 +6,7 @@ const { createProjects, getAllProject, getProjectById, getAllProjectByType, dele
 router.post(
   '/create-project',
   body('name').not().isEmpty().withMessage('Name is required'),
-  body('url').not().isEmpty().withMessage('Network is required'),
+  body('url').not().isEmpty().withMessage('Url is required'),
   body('description').not().isEmpty().withMessage('Description is required'),
   verifyErrors,
   createProjects

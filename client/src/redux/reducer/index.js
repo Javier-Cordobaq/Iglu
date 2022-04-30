@@ -7,7 +7,7 @@ import {
 const inicialState = {
   idioma: "español",
   filtro: [],
-  login: [],
+  login: false,
 };
 
 const rootReducer = (state = inicialState, action) => {
@@ -25,7 +25,7 @@ const rootReducer = (state = inicialState, action) => {
     case LOG_IN:
         return {
           ...state,
-          login: action.payload,
+          login: action.payload
         };
 
     default:

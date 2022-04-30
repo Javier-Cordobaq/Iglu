@@ -6,7 +6,7 @@ const {adminLogin} = require('../controllers/adminControllers')
 
 router.post('/admin-login',
     body('user').isEmail().normalizeEmail().withMessage('User invalid'),
-    body('password').not().isEmpty().withMessage('Contract is required'),
+    body('password').not().isEmpty().withMessage('password is required'),
     verifyErrors,
     adminLogin
 )

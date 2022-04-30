@@ -7,7 +7,7 @@ import { logIn } from '../../redux/actions';
 const LogIn = () => {
 
     const [state, setState] = useState({
-        email: "",
+        user: "",
         password: ""
     })
 
@@ -34,8 +34,8 @@ const LogIn = () => {
                     <p>Usuario</p>
                     <input
                     type='text'
-                    name='email'
-                    value={state.email}
+                    name='user'
+                    value={state.user}
                     onChange={handleChange}
                     placeholder='Usuario'
                     />

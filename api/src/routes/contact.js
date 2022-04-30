@@ -8,9 +8,9 @@ router.post(
   '/create-contact',
   body('name').not().isEmpty().withMessage('Name is required'),
   body('email').isEmail().normalizeEmail().withMessage('Email invalid'),
-  body('message').not().isEmpty().withMessage('Contract is required'),
-  body('phone').not().isEmpty().withMessage('Network is required'),
-  body('interesing').not().isEmpty().withMessage('Description is required'),
+  body('message').not().isEmpty().withMessage('Message is required'),
+  body('phone').not().isEmpty().withMessage('Phone is required'),
+  body('interesing').not().isEmpty().withMessage('Interesting is required'),
   verifyErrors,
   createContacts
 )
