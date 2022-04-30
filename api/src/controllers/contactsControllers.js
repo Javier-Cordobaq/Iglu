@@ -25,7 +25,7 @@ async function createContacts (req, res) {
 
 async function getAllContact (req, res) {
   try {
-    const contacts = getAllContacts()
+    const contacts = await getAllContacts()
     if (contacts === null) {
       res.status(400).json({
         message: 'No contacts found'

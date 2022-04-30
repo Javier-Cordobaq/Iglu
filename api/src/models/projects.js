@@ -5,6 +5,11 @@ const project = new Schema({
   url: String,
   images: [{
     type: Object
-  }]
+  }],
+  color: String,
+  socialNetworks:{
+    type: Object
+  },
+  type: String,
 }, { strict: false })
 module.exports = model('projects', project)

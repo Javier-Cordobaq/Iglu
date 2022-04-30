@@ -4,12 +4,13 @@ async function getAllContacts (filter) {
   return Contact.find(filter)
 }
 
-async function createContact (project) {
+async function createContact (contact) {
   const newContact = new Contact({
-    name: project.name,
-    description: project.description,
-    url: project.url,
-    images: project.images
+    name: contact.name,
+    email: contact.email,
+    message: contact.message,
+    phone: contact.phone,
+    interesing: contact.interesing
   })
   return newContact.save()
 }

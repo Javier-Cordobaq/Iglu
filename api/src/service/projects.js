@@ -13,13 +13,19 @@ async function createProject (project) {
     name: project.name,
     description: project.description,
     url: project.url,
-    images: project.images
+    images: project.images,
+    color: project.color,
+    socialNetworks:project.socialNetworks,
+    type: project.type
   })
   return newProject.save()
 }
-
+async function deleteProject(filters){
+  return Projects.findOneAndDelete(filters);
+}
 module.exports = {
   getOneProject,
   getAllProjects,
-  createProject
+  createProject,
+  deleteProject
 }
