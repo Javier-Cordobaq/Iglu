@@ -3,7 +3,8 @@ import {
   INGLES,
   LOG_IN,
   POST_PROJECTS,
-  GET_PROJECTS_BY_TYPE
+  GET_PROJECTS_BY_TYPE,
+  GET_JOBS
 } from "../actions/index";
 
 const inicialState = {
@@ -11,11 +12,17 @@ const inicialState = {
   filtro: [],
   login: false,
   projects: false,
+  jobs: [],
   tipo: []
 };
 
 const rootReducer = (state = inicialState, action) => {
   switch (action.type) {
+    case GET_JOBS:
+      return {
+        ...state,
+        jobs: action.payload
+      }
     case GET_PROJECTS_BY_TYPE:
       return {
         ...state,

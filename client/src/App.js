@@ -6,6 +6,7 @@ import DashBoard from './components/DashBoard/DashBoard';
 import Meeting from './components/Meeting/Meeting';
 import LogIn from './components/LogIn/LogIn';
 import SubirProyectos from './components/SubirProyectos/SubirProyectos';
+import SubirTrabajos from './components/SubirTrabajos/SubirTrabajos';
 import { Routes, Route } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 
@@ -23,6 +24,7 @@ function App() {
         <Route exact path='/meting' element={<Meeting/>}/>
         <Route exact path='/admin' element={/* login === true ? */ <DashBoard/>/* :<LogIn/> */} />
         <Route exact path='/subirproyectos' element={/* login === true ?  */<SubirProyectos/>/* :<LogIn/> */} />
+        <Route exact path='/subirtrabajos' element={/* login === true ?  */<SubirTrabajos/>/* :<LogIn/> */} />
       </Routes>
     </div>
   );

@@ -1,22 +1,95 @@
 .contNav{
     position: sticky;
     top: 0;
-    height: 100vh;
+    max-height: 100vh;
     width: 10rem;
     background-color: #ffffff;
     box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
     box-sizing: border-box;
+}			
+.contNav ul {
+    list-style:none;
 }
-.contNav a{
+.nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+.nav li a {
+    color: #5175f4;
+    border-bottom: 1px solid #5175f4;
+    text-decoration:none;
+    padding-left: 1rem;
+    height: 3rem;
+    display:block;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    transition: 0.3s all;
+}
+.proyectos{
+    position: relative;
+}
+.nav li a:hover {
+    background-color:#434343;
+}
+.nav li ul {
+    display:none;
+    position:absolute;
+    left: 10rem;
+    top: 0;
+    width: 100%;
+    background-color: gainsboro;
+    padding: 0;
+    animation: modal 0.3s;
+}
+@keyframes modal {
+    0% {opacity: 20%;}
+}
+.nav li:hover > ul {
+    display:block;
+}
+.nav li ul li {
+    position:relative;
+}
+.contImage {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+.contImage img {
+    object-fit: contain;
+    width: 70%;
+}
+/* .contNav a{
     color: none;
     text-decoration: none;
 }
-.contNav ul{
+.ulGeneral{
    margin: 0;
    padding: 0;
    list-style: none;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
 }
-.contNav li{
+.subMenu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+}
+.projects {
+    display: flex;
+    flex-direction: column;
+} 
+.ulGeneral li{
     width: 100%;
     margin: 0;
     padding: 0;
@@ -29,17 +102,5 @@
     height: 3rem;
     display: flex;
     align-items: center;
-}
-.contImage {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 3rem;
-    box-sizing: border-box;
-    margin-bottom: 1rem;
-}
-
-.contImage img {
-    object-fit: contain;
-    width: 70%;
-}
+    position: relative;
+} */

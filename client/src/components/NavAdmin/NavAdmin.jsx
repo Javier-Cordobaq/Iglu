@@ -10,10 +10,20 @@ const NavAdmin = () => {
         <div className={style.contImage}>
                 <img src={Logo} alt='Not Found'/>
         </div>
-        <ul>
-            <Link to='/admin'><li>Home</li></Link>
-            <Link to='/subirproyectos'><li>Proyectos</li></Link>
-        </ul>
+          <ul className={style.nav}>
+            <li><Link to='/admin'>Inicio</Link></li>
+            <li className={style.proyectos}><Link to='/admin'>Proyectos</Link>
+              <ul>
+                <li><Link to='/subirproyectos'>Subir proyectos</Link></li>
+              </ul>
+            </li>
+            <li className={style.proyectos}><Link to='/admin'>Trabajos</Link>
+              <ul>
+                <li><Link to='/subirtrabajos'>Subir trabajos</Link></li>
+              </ul>
+            </li>
+            <li><a href="">Contacto</a></li>
+          </ul>
     </nav>
     </div>
   )

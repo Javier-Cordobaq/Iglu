@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.contenedorContenido {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+}
