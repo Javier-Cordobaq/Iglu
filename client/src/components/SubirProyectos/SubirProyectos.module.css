@@ -1,6 +1,9 @@
+.paraUbicarNav{
+    display: flex;
+}
 .centrar {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
     min-height: 100vh;
     width: 100%;
     background: #f0f0f1;
@@ -27,5 +30,20 @@
     margin-bottom: 1.5rem;
 }
 .inputs::placeholder {
+    color: #c3c4c7;
+}
+.description{
+    width: 100%;
+    border: 1px solid #c3c4c7;
+    padding: 0;
+    outline: none;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    resize:none
+}
+.description::placeholder {
     color: #c3c4c7;
 }

@@ -3,65 +3,42 @@ import style from '../ContenidoWork/ContenidoWork.module.css'
 import {useDispatch, useSelector} from 'react-redux'
 import {filtro} from '../../redux/actions'
 import instagram from '../../imagenes/instagram.png'
+import { getProjectsByType } from '../../redux/actions'
 
 const ContenidoWork = () => {
 
-  const [state, setState] = useState('brandBuilding')
-  
+  const [state, setState] = useState('')
+
   const dispatch = useDispatch();
 
-  const filtrar = (arreglo, state) => {
-    dispatch(filtro(arreglo))
-    setState(state)
+  const filtrar = (tipo, prueba) => {
+    dispatch(getProjectsByType(tipo))
+    setState(prueba)
   }
 
-  const brandBuilding = [
-    {
-      name: 'Rosa Mezcal',
-      description: 'We won’t spam your inbox, we promise.',
-      color: '#664b40'
-    },
-    {
-      name: 'Togo',
-      description: 'We won’t spam your inbox, we promise.',
-      color: '#4e5b61'
-    }
-  ]
-
-  const brandManagement = [
-    {
-      name: 'Mulholz',
-      description: 'We won’t spam your inbox, we promise.',
-      color: '#6f8a46'
-    },
-    {
-      name: 'Sunny',
-      description: 'We won’t spam your inbox, we promise.',
-      color: '#ef7d30'
-    }
-  ]
+  const tipo = useSelector(c => c.tipo)
 
   const filtros = useSelector(state => state.filtro)
 
-  useEffect(() => {
-    dispatch(filtro(brandBuilding))
-  }, [])
+/*   useEffect(() => {
+    dispatch(getProjectsByType(tipo.description))
+  }, []) */
 
   return (
     <div className={style.centrar}>
       <div className={style.contenedor}>
           <div className={style.sticky}>
             <div className={style.botones}>
-              <button className={`${state === 'brandBuilding' ? style.select:style.noSelect}`} onClick={() => {filtrar(brandBuilding, 'brandBuilding')}}>Brand Building</button>
-              <button className={`${state === 'brandManagement' ? style.select:style.noSelect}`} onClick={() => {filtrar(brandManagement, 'brandManagement')}}>Brand Management</button>
+              <button className={`${state === 'brandBuilding' ? style.select:style.noSelect}`} onClick={() => {filtrar('Prueba', 'brandBuilding')}}>Brand Building</button>
+              <button className={`${state === 'brandManagement' ? style.select:style.noSelect}`} onClick={() => {filtrar('diseño', 'brandManagement')}}>Brand Management</button>
               <button className={style.noSelect}>Website Building</button>
               <button className={style.noSelect}>Custom Projects</button>
             </div>
           </div>
           <div className={style.projectsCont}>
             {
-              filtros.length !== 0 ? filtros.map(c => 
-              <div className={style.cards}>
+              tipo.projects ? tipo.projects.map(c => 
+              <div key={c._id} className={style.cards}>
                 <div className={style.textCont}>
                   <div className={style.header}>
                     <div>
@@ -83,7 +60,7 @@ const ContenidoWork = () => {
                   <button>Ver más</button>
                 </div>
                 <div className={style.contImg}>
-
+                  {/* <img src={c.images.portada} /> */}
                 </div>
               </div>
               ) 

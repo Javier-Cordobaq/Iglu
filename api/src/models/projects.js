@@ -3,9 +3,9 @@ const project = new Schema({
   name: String,
   description: String,
   url: String,
-  images: [{
+  images: {
     type: Object
-  }],
+  },
   color: String,
   socialNetworks:{
     type: Object

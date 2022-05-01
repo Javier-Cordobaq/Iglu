@@ -2,9 +2,10 @@ import './App.css';
 import PaginaInicial from './components/PaginaInicial/PaginaInicial';
 import LandingWork from './components/LandingWork/LandingWork';
 import LandingTheTeam from './components/LandingTheTeam/LandingTheTeam';
-import SubirProyectos from './components/SubirProyectos/SubirProyectos';
+import DashBoard from './components/DashBoard/DashBoard';
 import Meeting from './components/Meeting/Meeting';
 import LogIn from './components/LogIn/LogIn';
+import SubirProyectos from './components/SubirProyectos/SubirProyectos';
 import { Routes, Route } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 
@@ -20,7 +21,8 @@ function App() {
         <Route exact path='/work' element={<LandingWork/>}/>
         <Route exact path='/team' element={<LandingTheTeam/>}/>
         <Route exact path='/meting' element={<Meeting/>}/>
-        <Route exact path='/admin' element={login === true ? <SubirProyectos/>:<LogIn/>} />
+        <Route exact path='/admin' element={/* login === true ? */ <DashBoard/>/* :<LogIn/> */} />
+        <Route exact path='/subirproyectos' element={/* login === true ?  */<SubirProyectos/>/* :<LogIn/> */} />
       </Routes>
     </div>
   );

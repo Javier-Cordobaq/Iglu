@@ -1,0 +1,45 @@
+.contNav{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 10rem;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
+    box-sizing: border-box;
+}
+.contNav a{
+    color: none;
+    text-decoration: none;
+}
+.contNav ul{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+.contNav li{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #5175f4;
+    border-bottom: 1px solid #5175f4;
+    text-align: left;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+.contImage {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.contImage img {
+    object-fit: contain;
+    width: 70%;
+}
