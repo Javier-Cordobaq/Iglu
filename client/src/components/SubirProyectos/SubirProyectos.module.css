@@ -3,19 +3,63 @@
 }
 .centrar {
     display: flex;
-    justify-content: center;
-    min-height: 100vh;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100vh;
     width: 100%;
-    background: #f0f0f1;
+    background-color: #f0f0f1;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 3rem 0;
+}
+.centrar::-webkit-scrollbar {
+    width: 10px;              
+}
+.centrar::-webkit-scrollbar-track {
+    background: white;       
+}
+.centrar::-webkit-scrollbar-thumb {
+    background-color: rgb(184, 184, 184);    
+    border: 3px solid white; 
 }
 .contInputs{
-    width: 500px;
     text-align: left;
     border: 1px solid #c3c4c7;
     box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
     box-sizing: border-box;
     padding: 2rem;
     background-color: white;
+    height: auto;
+    width: 40%;
+}
+.contInputs h2 {
+    margin-top: 0;
+}
+.contInputs button {
+    background-color: #5175f4;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: 700;
+    border-radius: 3px;
+    padding: 5px 30px;
+    font-size: 18px;
+    transition: 0.2s all;
+}
+.contInputs button:hover {
+    cursor: pointer;
+    background-color: #3e5ac0;
+}
+.Select{
+    width: 100%;
+    box-sizing: border-box;
+    height: 3rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+.formControl {
+    width: 100%;
 }
 .inputs{
     width: 100%;
@@ -46,4 +90,10 @@
 }
 .description::placeholder {
     color: #c3c4c7;
+}
+.Buttons {
+    width: 100%;
+    box-sizing: border-box;
+    height: 3rem;
+    margin-bottom: 1rem;
 }

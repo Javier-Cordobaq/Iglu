@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     width: 1200px;
-    height: auto;
+    min-height: 100vh;
     margin-bottom: 3rem;
     box-sizing: border-box;
 }
@@ -65,10 +65,10 @@
     overflow: hidden;
     animation: Card 0.8s ease-in-out;
 }
-@keyframes Card {
+/* @keyframes Card {
     0% {transform: translateX(300px); opacity: 20%;}
     100%{}
-}
+} */
 .textCont {
     display: flex;
     flex-direction: column;
@@ -118,6 +118,11 @@
     width: 60%;
     height: 100%;
     background-color: rgb(208, 208, 208);
+}
+.contImg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 .header{
     display: flex;

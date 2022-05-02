@@ -10,15 +10,12 @@ export const GET_PROJECTS_BY_TYPE = 'GET_PROJECTS_BY_TYPE'
 export const POST_JOBS = 'POST_JOBS'
 export const GET_JOBS = 'GET_JOBS'
 export const DELETE_JOBS = 'DELETE_JOBS'
+export const GET_ALL_PROJECTS ='GET_ALL_PROJECTS'
+export const DELETE_PROJECTS = 'DELETE_PROJECTS'
+export const GET_PROJECTS_BY_ID = 'GET_PROJECTS_BY_ID'
+export const RESET = 'RESET'
 
-export const filtro = (info) => async dispatch => {
-    return dispatch({
-        type: FILTRO,
-        payload: info
-    })
-}
 export const cambiarIngles = (idioma) => async dispatch => {
-
     dispatch({
         type: INGLES,
         payload: idioma
@@ -71,7 +68,6 @@ export const postJobs = (info) => async dispatch => {
         }
     }
     catch (error) {
-        console.log(error, 'Errores')
         return dispatch({
             type: POST_JOBS,
             payload: error.response.data.errors
@@ -85,6 +81,20 @@ export const getProjectsByType = (tipo) => async dispatch => {
                 payload: json.data
             })
 }
+export const getProjectsById = (_id) => async dispatch => {
+    const json = await axios.get(`http://localhost:5000/project/id/${_id}`)
+    return dispatch({
+            type: GET_PROJECTS_BY_ID,
+            payload: json.data
+        })
+}
+export const getAllProjects = () => async dispatch => {
+    const json = await axios.get(`http://localhost:5000/project/all-projects`)
+    return dispatch({
+            type: GET_ALL_PROJECTS,
+            payload: json.data
+        })
+}
 export const getJobs = () => async dispatch => {
         const json = await axios.get(`http://localhost:5000/jobs/all-jobs`)
         return dispatch({
@@ -97,5 +107,17 @@ export const deleteJobs = (_id) => async dispatch => {
     return dispatch({
         type: DELETE_JOBS,
         payload: json.data
+    })
+}
+export const deleteProjects = (_id) => async dispatch => {
+    const json = await axios.delete(`http://localhost:5000/project/delete/${_id}`)
+    return dispatch({
+        type: DELETE_PROJECTS,
+        payload: json.data
+    })
+}
+export const reset = () => dispatch => {
+    return dispatch({
+      type: RESET
     })
 }

@@ -1,0 +1,105 @@
+.contFlex {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #f0f0f1;
+}
+.contCards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+    padding: 3rem 0;
+}
+.cards {
+    display: flex;
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px solid rgb(191, 191, 191);
+    box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.textCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+.textCont p {
+    font-size: 0.6rem;
+    color: #888582;
+}
+.textCont button {
+    color: #5fb73b;
+    border: 1px solid #f2f2f2;
+    background-color: white;
+    width: 50%;
+    padding: 5px 0;
+    border-radius: 5px;
+    font-size: 0.6rem;
+    transition: 0.3s all;
+}
+.textCont button:hover {
+    color: white;
+    background-color: #5fb73b;
+    cursor: pointer;
+}
+.textCont h1 {
+    margin: 0;
+    font-size: 1rem;
+}
+.participantes h2 {
+    font-size: 0.6rem;
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+    color: #333333;
+}
+.participantes p {
+    font-size: 0.6rem;
+    margin: 0 0 1rem 0;
+    color: #888582;
+}
+.contImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background-color: rgb(208, 208, 208);
+}
+.contImg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.contImg span {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    transition: 0.2s all;
+}
+.contImg span:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header img{
+    height: 1rem;
+    filter: grayscale(100%) brightness(150%);
+}

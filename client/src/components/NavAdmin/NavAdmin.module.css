@@ -1,11 +1,16 @@
+.contenedor {
+    height: 100vh;
+}
 .contNav{
     position: sticky;
     top: 0;
-    max-height: 100vh;
     width: 10rem;
     background-color: #ffffff;
-    box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    border-right: 1px solid #c3c4c7;
     box-sizing: border-box;
+    height: 100%;
+    padding: 1rem 0;
 }			
 .contNav ul {
     list-style:none;
@@ -17,8 +22,7 @@
     padding: 0;
 }
 .nav li a {
-    color: #5175f4;
-    border-bottom: 1px solid #5175f4;
+    color: none;
     text-decoration:none;
     padding-left: 1rem;
     height: 3rem;
@@ -29,11 +33,21 @@
     box-sizing: border-box;
     transition: 0.3s all;
 }
-.proyectos{
+.select a{
+    color: #5175f4; 
+}
+.noSelect a{
+    color: #c7c6c3;
+}
+.prueba a{
+    color: #5175f4;
+}
+#proyectos{
     position: relative;
 }
 .nav li a:hover {
-    background-color:#434343;
+    background-color:#e3e3e3;
+    color: gray;
 }
 .nav li ul {
     display:none;
@@ -44,6 +58,9 @@
     background-color: gainsboro;
     padding: 0;
     animation: modal 0.3s;
+}
+.nav li ul li > a {
+    color: none;
 }
 @keyframes modal {
     0% {opacity: 20%;}
@@ -60,47 +77,8 @@
     width: 100%;
     height: 3rem;
     box-sizing: border-box;
-    margin-bottom: 1rem;
 }
 .contImage img {
     object-fit: contain;
     width: 70%;
 }
-/* .contNav a{
-    color: none;
-    text-decoration: none;
-}
-.ulGeneral{
-   margin: 0;
-   padding: 0;
-   list-style: none;
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-}
-.subMenu {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-width: 100%;
-}
-.projects {
-    display: flex;
-    flex-direction: column;
-} 
-.ulGeneral li{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    color: #5175f4;
-    border-bottom: 1px solid #5175f4;
-    text-align: left;
-    padding-left: 1rem;
-    box-sizing: border-box;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    position: relative;
-} */

@@ -30,7 +30,7 @@ const DashBoard = () => {
   return (
     <div className={style.contenedor}>
         <NavAdmin/>
-        <div style={{ height: '85%' , width: '100%' }}>
+        <div className={style.tablas}>
           <DataGrid
             rows={rows}
             columns={columns}

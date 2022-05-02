@@ -4,24 +4,43 @@ import {
   LOG_IN,
   POST_PROJECTS,
   GET_PROJECTS_BY_TYPE,
-  GET_JOBS
+  GET_JOBS,
+  GET_ALL_PROJECTS,
+  GET_PROJECTS_BY_ID,
+  RESET
 } from "../actions/index";
 
 const inicialState = {
   idioma: "español",
-  filtro: [],
   login: false,
   projects: false,
+  allProjects: [],
   jobs: [],
-  tipo: []
+  tipo: [],
+  detail: []
 };
 
 const rootReducer = (state = inicialState, action) => {
   switch (action.type) {
+    case RESET:
+      return {
+        ...state,
+        detail: [],
+      };
+    case GET_PROJECTS_BY_ID:
+      return {
+        ...state,
+        detail: action.payload
+      }
     case GET_JOBS:
       return {
         ...state,
         jobs: action.payload
+      }
+    case GET_ALL_PROJECTS:
+      return {
+        ...state,
+        allProjects: action.payload
       }
     case GET_PROJECTS_BY_TYPE:
       return {
@@ -32,11 +51,6 @@ const rootReducer = (state = inicialState, action) => {
       return {
         ...state,
         projects: action.payload
-      }
-    case FILTRO:
-      return {
-        ...state,
-        filtro: action.payload
       }
     case INGLES:
       return {
