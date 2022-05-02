@@ -1,16 +1,29 @@
 .centrar {
     width: 100%;
-    min-height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 .fondo{
-    position: fixed;
-    height: 100%;
+    max-height: 100vh;
     width: 100%;
     z-index: -1;
+}
+.fondo img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.fondo::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.655);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 .contenedor {
     margin-top: 10rem;
@@ -26,20 +39,6 @@
     overflow: hidden;
     box-sizing: border-box;
     padding: 2rem 5rem 2rem 3rem;
-}
-.fondo img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-.fondo::before{
-    content: '';
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.655);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
 }
 .izquierda {
     width: 40%;
