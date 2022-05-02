@@ -1,30 +1,11 @@
 .centrar {
     width: 100%;
-    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-}
-.fondo{
-    max-height: 100vh;
-    width: 100%;
-    z-index: -1;
-}
-.fondo img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-.fondo::before{
-    content: '';
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.655);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
+} 
 .contenedor {
     margin-top: 10rem;
     margin-bottom: 10rem;
@@ -48,4 +29,4 @@
     width: 60%;
     height: 100%;
     background-color: aqua;
-}
+} 

@@ -59,7 +59,7 @@ export const postProjects = (info) => async dispatch => {
 }
 export const postJobs = (info) => async dispatch => {
     try{
-        const json = await axios.post(`http://localhost:5000/jobs/create-job`, info)
+        const json = await axios.post(`/jobs/create-job`, info)
         if (json.status === 200){
             return dispatch({
                 type: POST_JOBS,
@@ -75,42 +75,42 @@ export const postJobs = (info) => async dispatch => {
     }
 }
 export const getProjectsByType = (tipo) => async dispatch => {
-        const json = await axios.get(`http://localhost:5000/project/type/${tipo}`)
+        const json = await axios.get(`/project/type/${tipo}`)
         return dispatch({
                 type: GET_PROJECTS_BY_TYPE,
                 payload: json.data
             })
 }
 export const getProjectsById = (_id) => async dispatch => {
-    const json = await axios.get(`http://localhost:5000/project/id/${_id}`)
+    const json = await axios.get(`/project/id/${_id}`)
     return dispatch({
             type: GET_PROJECTS_BY_ID,
             payload: json.data
         })
 }
 export const getAllProjects = () => async dispatch => {
-    const json = await axios.get(`http://localhost:5000/project/all-projects`)
+    const json = await axios.get(`/project/all-projects`)
     return dispatch({
             type: GET_ALL_PROJECTS,
             payload: json.data
         })
 }
 export const getJobs = () => async dispatch => {
-        const json = await axios.get(`http://localhost:5000/jobs/all-jobs`)
+        const json = await axios.get(`/jobs/all-jobs`)
         return dispatch({
             type: GET_JOBS,
             payload: json.data
         })
 }
 export const deleteJobs = (_id) => async dispatch => {
-    const json = await axios.delete(`http://localhost:5000/jobs/delete/${_id}`)
+    const json = await axios.delete(`/jobs/delete/${_id}`)
     return dispatch({
         type: DELETE_JOBS,
         payload: json.data
     })
 }
 export const deleteProjects = (_id) => async dispatch => {
-    const json = await axios.delete(`http://localhost:5000/project/delete/${_id}`)
+    const json = await axios.delete(`/project/delete/${_id}`)
     return dispatch({
         type: DELETE_PROJECTS,
         payload: json.data
