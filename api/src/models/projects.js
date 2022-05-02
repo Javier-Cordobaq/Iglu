@@ -7,9 +7,11 @@ const project = new Schema({
     type: Object
   },
   color: String,
-  socialNetworks:{
+  socialNetworks: {
     type: Object
   },
   type: String,
+  logo: String,
+  client: String
 }, { strict: false })
 module.exports = model('projects', project)

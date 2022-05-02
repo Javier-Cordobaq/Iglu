@@ -1,8 +1,8 @@
 const { createProject, getAllProjects, getOneProject, deleteProject } = require('../service/projects')
 async function createProjects (req, res) {
-  const { name, description, url, images, color, socialNetworks, type } = req.body
+  const { name, description, url, images, color, socialNetworks, type, client, logo } = req.body
   try {
-    const project = await createProject({ name, description, url, images, color, socialNetworks, type })
+    const project = await createProject({ name, description, url, images, color, socialNetworks, type, client, logo })
     if (project) {
       res.status(201).json({
         message: 'Project created successfully'
@@ -75,16 +75,36 @@ async function getAllProjectByType (req, res) {
     })
   }
 }
-async function deleteProj(req,res){
-  const { id } = req.params;
-  try{
-      await deleteProject({_id : id })
-      res.status(200).json({
-        message:"project delete"
-      })
-  }catch(err){
+async function deleteProj (req, res) {
+  const { id } = req.params
+  try {
+    await deleteProject({ _id: id })
+    res.status(200).json({
+      message: 'project delete'
+    })
+  } catch (err) {
     res.status(500).json({
       message: 'Error delete project',
+      err: err.message
+    })
+  }
+}
+async function getAllProjectByClient (req, res) {
+  const { client } = req.params
+  try {
+    const projects = await getAllProjects({ client })
+    if (projects === null) {
+      res.status(400).json({
+        message: 'No projects found'
+      })
+    } else {
+      res.status(200).json({
+        projects
+      })
+    }
+  } catch (err) {
+    res.status(500).json({
+      message: 'Error getting projects',
       err: err.message
     })
   }
@@ -94,5 +114,6 @@ module.exports = {
   getAllProject,
   getProjectById,
   getAllProjectByType,
-  deleteProj
+  deleteProj,
+  getAllProjectByClient
 }

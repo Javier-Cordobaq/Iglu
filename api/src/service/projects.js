@@ -15,13 +15,15 @@ async function createProject (project) {
     url: project.url,
     images: project.images,
     color: project.color,
-    socialNetworks:project.socialNetworks,
-    type: project.type
+    socialNetworks: project.socialNetworks,
+    type: project.type,
+    client: project.client,
+    logo: project.logo
   })
   return newProject.save()
 }
-async function deleteProject(filters){
-  return Projects.findOneAndDelete(filters);
+async function deleteProject (filters) {
+  return Projects.findOneAndDelete(filters)
 }
 module.exports = {
   getOneProject,
