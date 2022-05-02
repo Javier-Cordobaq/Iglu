@@ -23,7 +23,7 @@ export const cambiarIngles = (idioma) => async dispatch => {
 }
 export const logIn = (info) => async dispatch => {
     try{
-        const json = await axios.post(`http://localhost:5000/admin/admin-login`, info)
+        const json = await axios.post(`/admin/admin-login`, info)
         if (json.status === 200){
             return dispatch({
                 type: LOG_IN,
@@ -41,7 +41,7 @@ export const logIn = (info) => async dispatch => {
 }
 export const postProjects = (info) => async dispatch => {
     try{
-        const json = await axios.post(`http://localhost:5000/project/create-project`, info)
+        const json = await axios.post(`/project/create-project`, info)
         if (json.status === 200){
             return dispatch({
                 type: POST_PROJECTS,

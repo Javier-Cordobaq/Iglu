@@ -24,10 +24,10 @@ function App() {
         <Route exact path='/team' element={<LandingTheTeam/>}/>
         <Route exact path='/meting' element={<Meeting/>}/>
         <Route exact path='/detail/:_id' element={<DetailProyectos/>}/>
-        <Route exact path='/admin' element={/* login === true ? */ <DashBoard/>/* :<LogIn/> */} />
-        <Route exact path='/subirproyectos' element={/* login === true ? */<SubirProyectos/>/* :<LogIn/> */} />
-        <Route exact path='/subirtrabajos' element={/* login === true ? */<SubirTrabajos/>/* :<LogIn/> */} />
-        <Route exact path='/proyectos' element={/* login === true ? */<TablaProjects/>/* :<LogIn/> */} />
+        <Route exact path='/admin' element={ login === true ?  <DashBoard/> :<LogIn/> } />
+        <Route exact path='/subirproyectos' element={ login === true ? <SubirProyectos/> :<LogIn/> } />
+        <Route exact path='/subirtrabajos' element={ login === true ? <SubirTrabajos/> :<LogIn/> } />
+        <Route exact path='/proyectos' element={ login === true ? <TablaProjects/> :<LogIn/> } />
       </Routes>
     </div>
   );
