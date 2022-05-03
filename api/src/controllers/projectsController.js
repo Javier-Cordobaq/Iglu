@@ -1,8 +1,8 @@
 const { createProject, getAllProjects, getOneProject, deleteProject } = require('../service/projects')
 async function createProjects (req, res) {
-  const { name, description, url, images, color, socialNetworks, type, client, logo } = req.body
+  const { name, description, url, images, color, socialNetworks, type, client, logo, creators } = req.body
   try {
-    const project = await createProject({ name, description, url, images, color, socialNetworks, type, client, logo })
+    const project = await createProject({ name, description, url, images, color, socialNetworks, type, client, logo, creators })
     if (project) {
       res.status(201).json({
         message: 'Project created successfully'

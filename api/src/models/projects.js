@@ -12,6 +12,9 @@ const project = new Schema({
   },
   type: String,
   logo: String,
-  client: String
+  client: String,
+  creators: [{
+    type: Object
+  }]
 }, { strict: false })
 module.exports = model('projects', project)

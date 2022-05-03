@@ -17,6 +17,7 @@ async function createProject (project) {
     color: project.color,
     socialNetworks: project.socialNetworks,
     type: project.type,
+    creators: project.creators,
     client: project.client,
     logo: project.logo
   })

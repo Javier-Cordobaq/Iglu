@@ -54,20 +54,22 @@ const ContenidoWork = () => {
                     <div>
                       <h1 style={{color: `${c.color}`}}>{c.name}</h1>
                     </div>
-                    <div>
                       <img src={instagram} alt="" />
-                    </div>
                   </div>
                   <div className={style.description}>
                     <p>{c.description}</p>
                   </div>
                     <div className={style.participantes}>
-                      <h2>Nicolás Vásquez</h2>
-                      <p>Director de Arte</p>
-                      <h2>Alberto Martínez</h2>
-                      <p>Redactor</p>
-                      <h2>Daniel Vinueza</h2>
-                      <p>Director Creativo</p>
+                      {
+                        tipo?.length !== 0 ? tipo.projects[0].creators.map(c => (
+                          <div key={c.name}>
+                          <h2>{c.name}</h2> 
+                          <p>{c.task}</p>
+                          </div>
+                        ))
+                        :
+                         null
+                      }
                     </div>
                     <Link to={`/detail/${c._id}`}>
                       <button>Ver más</button>

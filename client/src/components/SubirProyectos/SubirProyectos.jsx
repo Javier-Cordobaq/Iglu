@@ -75,7 +75,7 @@ const SubirProyectos = () => {
   const dispatch = useDispatch();
   const jobs = useSelector(c => c.jobs)
 
-  const [creators, setCreators] = useState({
+  const [creator, setCreators] = useState({
       name: '',
       task: ''
     })
@@ -102,12 +102,7 @@ const SubirProyectos = () => {
     color:"",
     socialNetworks:{},
     type:"",
-    creators:[
-        {
-            name:"Alvaro Vega",
-            task: "Full-Stack developer"
-        }, 
-    ]
+    creators:[]
   })
 
   const handleChange = (e) => {
@@ -118,6 +113,18 @@ const SubirProyectos = () => {
     setSocial({...social, [e.target.name]: e.target.value}) 
     setState({...state, socialNetworks: social})
   } 
+
+  const handleChangeCreators = (e) => {
+    setCreators({...creator, [e.target.name]: e.target.value}) 
+  } 
+
+  const handleAdd = () => {
+    setState({...state, creators: [...state.creators, creator]})
+    setCreators({
+      name: '',
+      task: ''
+    })
+  }
 
   const handleSumbit = (e) => {
     e.preventDefault();
@@ -152,15 +159,6 @@ const SubirProyectos = () => {
           />
 
           <input 
-          type="url" 
-          placeholder='Url proyecto'
-          className={style.inputs}
-          name='url'
-          value={state.url}
-          onChange={handleChange}
-          />
-
-          <input 
           type="text" 
           placeholder='Color titulo'
           className={style.inputs}
@@ -168,7 +166,8 @@ const SubirProyectos = () => {
           value={state.color}
           onChange={handleChange}
           />
-          <div className={style.Select}>
+
+                <div className={style.Select}>
                     <FormControl className={style.formControl} variant="outlined">
                     <InputLabel id="demo-simple-select-outlined-label">Tipo</InputLabel>
                     <Select
@@ -193,7 +192,35 @@ const SubirProyectos = () => {
                       }
                     </Select>
                     </FormControl>
-           </div>      
+                </div>     
+
+                  <h2>Creadores.</h2>       
+                        
+                  <div className={style.creadores}> 
+                    <input 
+                    type="text" 
+                    placeholder='Creador'
+                    className={style.inputs}
+                    name='name'
+                    value={creator.name}
+                    onChange={handleChangeCreators}
+                    />
+
+                    <input 
+                    type="text" 
+                    placeholder='Cargo'
+                    className={style.inputs}
+                    name='task'
+                    value={creator.task}
+                    onChange={handleChangeCreators}
+                    />
+
+                    <span onClick={handleAdd} className="material-icons-outlined">
+                      add_circle_outline
+                    </span>
+                  </div>
+
+                  <h2>Imagenes.</h2>
 
                     <div className={style.Buttons}>
                       <Button
@@ -273,6 +300,19 @@ const SubirProyectos = () => {
               value={social.twitter}
               onChange={handleChangeSocial}
               />
+
+              <h2>Url.</h2>
+
+              <input 
+              type="url" 
+              placeholder='Url proyecto'
+              className={style.inputs}
+              name='url'
+              value={state.url}
+              onChange={handleChange}
+              />
+
+              <h2>Descripción.</h2>
 
               <textarea 
               className={style.description}
