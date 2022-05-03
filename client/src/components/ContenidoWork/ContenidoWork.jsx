@@ -58,7 +58,9 @@ const ContenidoWork = () => {
                       <img src={instagram} alt="" />
                     </div>
                   </div>
-                  <p>{c.description}</p>
+                  <div className={style.description}>
+                    <p>{c.description}</p>
+                  </div>
                     <div className={style.participantes}>
                       <h2>Nicolás Vásquez</h2>
                       <p>Director de Arte</p>

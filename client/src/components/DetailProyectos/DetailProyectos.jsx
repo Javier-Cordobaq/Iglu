@@ -21,32 +21,27 @@ const DetailProyectos = () => {
     return () => {dispatch(reset())}
 }, [])
 
-const containerStyle = {
-  backgroundImage: `url(${detail.length !== 0 ? detail.project.name:null})`,
-  width: "100%",
-  height: "100%",
-};
-
   return (
     <div>
       <Nav/>
-      <div className={style.centrar}>
-          <div style={{containerStyle}} className={style.contenedor}>
+      <div style={{backgroundImage: `url(${detail.length === 0 ? null:detail.project.images.portada})`}} className={style.centrar}>
+          <div className={style.contenedor}>
             <div className={style.izquierda}>
-              <h1>{detail.length !== 0 ? detail.project.name:null}</h1>
+              <h1 style={{color: `${detail.length === 0 ? null:detail.project.color}`}}>{detail.length !== 0 ? detail.project.name:null}</h1>
             </div>
             <div className={style.derecha}>
-            <Carousel /* showThumbs={false} */ showStatus={false} autoPlay={true} showArrows={false} emulateTouch={true} interval={5000} infiniteLoop={true}>
-               <div>
+            <Carousel className={style.Slider} showIndicators={false} showThumbs={false} showStatus={false} autoPlay={true} emulateTouch={true} interval={7000} infiniteLoop={true}>
+               <div className={style.imagenes}>
                   <img src={detail.length !== 0 ? detail.project.images.portada:null} alt=''/>
                </div>
-               <div>
+               <div className={style.imagenes}>
                   <img src={detail.length !== 0 ? detail.project.images.image1:null} alt=''/>
                </div>
-               <div>
+               <div className={style.imagenes}>
                   <img src={detail.length !== 0 ? detail.project.images.image2:null} alt=''/>
                </div>
             </Carousel>
+            <p>{detail.length !== 0 ? detail.project.description:null}</p>
             </div>
           </div>
       </div>

@@ -6,7 +6,7 @@ import style from '../Slider/Slider.module.css'
 const Slider = () => {
   return (
     <div>
-            <Carousel showThumbs={false} showStatus={false} autoPlay={true} showArrows={false} emulateTouch={true} interval={5000} infiniteLoop={true}>
+            <Carousel showThumbs={false} showStatus={false} autoPlay={true} showArrows={false} emulateTouch={true} interval={10000} infiniteLoop={true}>
                 <div className={style.imagenes}>
                     <h1>1</h1>
                 </div>

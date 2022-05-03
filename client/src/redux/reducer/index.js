@@ -7,6 +7,7 @@ import {
   GET_JOBS,
   GET_ALL_PROJECTS,
   GET_PROJECTS_BY_ID,
+  GET_CLIENT,
   RESET
 } from "../actions/index";
 
@@ -16,12 +17,18 @@ const inicialState = {
   projects: false,
   allProjects: [],
   jobs: [],
+  client: [],
   tipo: [],
   detail: []
 };
 
 const rootReducer = (state = inicialState, action) => {
   switch (action.type) {
+    case GET_CLIENT:
+      return {
+        ...state,
+        client: action.payload
+      }
     case RESET:
       return {
         ...state,

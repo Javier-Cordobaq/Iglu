@@ -93,6 +93,10 @@
     color: #f93564;
     transform: scale(1.1);
 }
+.home {
+    color: #5175f4;
+    transform: scale(1.1);
+}
 
 .noSelect {
     color: black;

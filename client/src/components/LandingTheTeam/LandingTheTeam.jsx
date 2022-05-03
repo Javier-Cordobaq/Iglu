@@ -25,7 +25,7 @@ const LandingTheTeam = () => {
         <AliesTeam/>
         <Footer/>
         <div data-aos="zoom-in-up" data-aos-duration="1200" className={style.buttonToTop} onClick={toTop}>
-          <span class="material-icons-outlined">
+          <span className="material-icons-outlined">
           expand_less
           </span>
         </div>

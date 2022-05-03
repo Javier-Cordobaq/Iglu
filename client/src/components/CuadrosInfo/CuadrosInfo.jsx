@@ -23,22 +23,22 @@ const CuadrosInfo = () => {
             <div className={style.derechaTop}>
                 <h1>Do you have a brand that is...</h1>
                 <div className={style.parrafos}>
-                <span class="material-icons-outlined">check_circle</span><p>Not attractive to new costumers?</p>
+                <span className="material-icons-outlined">check_circle</span><p>Not attractive to new costumers?</p>
                 </div>
                 <div className={style.parrafos}>
-                <span class="material-icons-outlined">check_circle</span><p>Lacking recognition??</p>
+                <span className="material-icons-outlined">check_circle</span><p>Lacking recognition??</p>
                 </div>
                 <div className={style.parrafos}>
-                <span class="material-icons-outlined">check_circle</span><p>{'Missing a unique look & feel?'}</p>
+                <span className="material-icons-outlined">check_circle</span><p>{'Missing a unique look & feel?'}</p>
                 </div>
                 <div className={style.parrafos}>
-                <span class="material-icons-outlined">check_circle</span><p>Staying behind the competition?</p>
+                <span className="material-icons-outlined">check_circle</span><p>Staying behind the competition?</p>
                 </div>
                 <div className={style.parrafos}>
-                <span class="material-icons-outlined">check_circle</span><p>Not helping you sell like you could?</p>
+                <span className="material-icons-outlined">check_circle</span><p>Not helping you sell like you could?</p>
                 </div>
                 <div className={style.parrafos}>
-                <span class="material-icons-outlined">check_circle</span><p>Not in touch with today’s trends?</p>
+                <span className="material-icons-outlined">check_circle</span><p>Not in touch with today’s trends?</p>
                 </div>
                 <div className={style.canHelp}>
                 <p>...or, don’t have a brand at all!?</p>

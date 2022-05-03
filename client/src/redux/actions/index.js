@@ -13,6 +13,7 @@ export const DELETE_JOBS = 'DELETE_JOBS'
 export const GET_ALL_PROJECTS ='GET_ALL_PROJECTS'
 export const DELETE_PROJECTS = 'DELETE_PROJECTS'
 export const GET_PROJECTS_BY_ID = 'GET_PROJECTS_BY_ID'
+export const GET_CLIENT = 'GET_CLIENT'
 export const RESET = 'RESET'
 
 export const cambiarIngles = (idioma) => async dispatch => {
@@ -101,6 +102,13 @@ export const getJobs = () => async dispatch => {
             type: GET_JOBS,
             payload: json.data
         })
+}
+export const getClient = (client) => async dispatch => {
+    const json = await axios.get(`/project/client/${client}`)
+    return dispatch({
+        type: GET_CLIENT,
+        payload: json.data
+    })
 }
 export const deleteJobs = (_id) => async dispatch => {
     const json = await axios.delete(`/jobs/delete/${_id}`)

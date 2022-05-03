@@ -32,7 +32,7 @@ const Nav = () => {
             </Link>
             <div className={style.contenedorNavegacion}>
                 <ul className={style.rutasUL}>
-                    <Link to='/'><li className={style.noSelect}>Home</li></Link>
+                    <Link to='/'><li className={`${ruta === principal ? style.home:style.noSelect}`}>Home</li></Link>
                     <Link to='/work'><li className={`${ruta === work ? style.work:style.noSelect}`}>{idioma === "español" ? "Trabajos" : "Work"}</li></Link>
                     <Link to='/team'><li className={`${ruta === team ? style.team:style.noSelect}`}>{idioma === "español" ? "El equipo" : "The Team"}</li></Link>
                     <Link to='/meting'><li className={`${ruta === meting ? style.meting:style.noSelect}`}>{idioma === "español" ? "Organizar una reunión" : "Set up a Meeting"}</li></Link>
